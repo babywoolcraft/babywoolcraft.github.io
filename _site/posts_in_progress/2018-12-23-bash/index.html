@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+
+  <title>Useful bash commands</title>
+
+  <meta name="author" content="Karen Harbisher" />
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Home - babywoolcraft" href="/feed.xml" />
+
+  
+
+  
+  
+
+
+  
+    
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Useful bash commands" />
+  
+
+   
+  <meta property="og:description" content="Over the last couple of years I have been (naively) using the terminal mainly to navigate directories and to commit changes in version control. Recently, I decided that I should learn more about the command line and shell scripting so I bought the **Linux command line and shell scripting bible**....">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4000/posts_in_progress/2018-12-23-bash/" />
+  <link rel="canonical" href="http://localhost:4000/posts_in_progress/2018-12-23-bash/" />
+  
+
+  
+  <meta property="og:image" content="http://localhost:4000avatar-icon.png" />
+  
+
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
+
+  
+  <meta name="twitter:title" content="Useful bash commands" />
+  
+
+  
+  <meta name="twitter:description" content="Over the last couple of years I have been (naively) using the terminal mainly to navigate directories and to commit changes in version control. Recently, I decided that I should learn more about the command line and shell scripting so I bought the **Linux command line and shell scripting bible**....">
+  
+
+  
+  <meta name="twitter:image" content="http://localhost:4000avatar-icon.png" />
+  
+
+  
+
+</head>
+
+
+  <body>
+
+    
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="http://localhost:4000">Home</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/pages/aboutme">About Me</a>
+
+          </li>
+        
+        
+        
+          <li class="navlinks-container">
+            <a class="navlinks-parent" href="javascript:void(0)">Kitting</a>
+            <div class="navlinks-children">
+              
+                
+                  
+
+
+
+
+
+
+<a href="/pages/baby_clothes">Baby clothes</a>
+
+                
+              
+                
+                  
+
+
+
+
+
+
+<a href="/pages/baby_blankets">Baby blankets</a>
+
+                
+              
+                
+                  
+
+
+
+
+
+
+<a href="/pages/baby_shawls">Baby shawls</a>
+
+                
+              
+                
+                  
+
+
+
+
+
+
+<a href="/pages/toys">Toys</a>
+
+                
+              
+            </div>
+          </li>
+        
+        
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/pages/contact">Contact</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+  <div id="header-big-imgs" data-num-img=1
+    
+	  
+	  
+	    
+		  data-img-src-1="/img/blg-img/code-dark.jpeg"
+		
+	  
+    
+  ></div>
+
+
+<header class="header-section has-img">
+
+<div class="big-img intro-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>Useful bash commands</h1>
+		  
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class='img-desc'></span>
+</div>
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-heading">
+          <h1>Useful bash commands</h1>
+		  
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <p>Over the last couple of years I have been (naively) using the terminal mainly to navigate directories and to commit changes in version control. Recently, I decided that I should learn more about the command line and shell scripting so I bought the <strong>Linux command line and shell scripting bible</strong>. As I read through this book I’m going to make notes which will be easily accessible on this page.</p>
+
+<h2 id="basic-bash-shell-commands">Basic bash shell commands</h2>
+
+<p>Walk before you can run - first lets get to grips with the basics.</p>
+
+<h3 id="some-basics">Some basics</h3>
+
+<h4 id="directory-structure">Directory structure</h4>
+
+<p>A <strong>parent directory</strong> is the directory one level back, i.e. <code class="highlighter-rouge">parent_dir/current_dir</code>.</p>
+
+<p>A <strong>sub directory</strong> or <strong>child directory</strong> is a directory located within the current directory, i.e. <code class="highlighter-rouge">current_dir/sub_directory</code>.</p>
+
+<p>Specifying destinations (either files or directories) are summarised in the following table.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Destination</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">.</code></td>
+      <td>current directory</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">destination</code> or <code class="highlighter-rouge">./destination</code></td>
+      <td>destination located in current directory</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">path/to/destination</code></td>
+      <td>destination located within one or more sub directories</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">..</code></td>
+      <td>parent directory</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">../destination</code></td>
+      <td>destination located in parent directory</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">../path/to/destination</code></td>
+      <td>destination in a sub directory of the parent directory</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="identifying-via-naming-convention">Identifying via naming convention</h4>
+
+<p>SAY ABOUT *, ?, [-XXX]</p>
+
+<h3 id="navigating-directories">Navigating directories</h3>
+
+<p>We can change directories using the <code class="highlighter-rouge">cd</code> command syntax. The command takes a single parameter: the <strong>directory</strong> which you wish to navigate to.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>destination    <span class="c">#see table detailing choices of destination</span>
+</code></pre></div></div>
+
+<p>Note that the single dot is usually omitted when using the <code class="highlighter-rouge">cd</code> command for files within the current directory.</p>
+
+<p>If you leave the parameter blank the <code class="highlighter-rouge">cd</code> command will take you back to your home directory.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span>    <span class="c">#go to the home directory</span>
+</code></pre></div></div>
+
+<p>It is often useful to see which directory you are currently in. To do this we can use the <code class="highlighter-rouge">pwd</code> command. Simply type this into the terminal (no need for any parameters!).</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">pwd</span>    <span class="c">#view the present working directory</span>
+</code></pre></div></div>
+
+<h3 id="listing-contents-of-directories">Listing contents of directories</h3>
+
+<p>To list the contents of a directory we use the <code class="highlighter-rouge">ls</code> command. If no parameter is supplied, <code class="highlighter-rouge">ls</code> lists the contents of the current directory.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls </span>destination_of_directory    <span class="c">#lists all files and directories contained in the destination</span>
+</code></pre></div></div>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span>     <span class="c">#lists contents of current directory</span>
+</code></pre></div></div>
+
+<p>We can also list all of the files following a naming convention using the following command.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls </span>naming_convention
+</code></pre></div></div>
+
+<p>The <code class="highlighter-rouge">ls</code> command has many options some of which are listed in the table below. To see a full list of options use the <code class="highlighter-rouge">$ man ls</code> (for manual) command.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">-a</code></td>
+      <td>shows all files including hidden files such as dot files (<code class="highlighter-rouge">.a_dotfile</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">-R</code></td>
+      <td>recursively lists contents of directory and sub directories</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">-F</code></td>
+      <td>directories end with a backslash <code class="highlighter-rouge">/</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">-l</code></td>
+      <td>a long listing providing more information about the files</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>An example of using some options:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-a</span> <span class="nt">-l</span> destination_of_directory    <span class="c">#list all files in long format in the destination directory</span>
+</code></pre></div></div>
+
+<h3 id="managing-directories">Managing directories</h3>
+
+<h4 id="create-a-directory">Create a directory</h4>
+
+<h4 id="delete-a-directory">Delete a directory</h4>
+
+<h3 id="file-operations">File operations</h3>
+
+<h4 id="creating-files">Creating files</h4>
+
+<h4 id="copying-files">Copying files</h4>
+
+<h4 id="renaming--moving-files">Renaming &amp; moving files</h4>
+
+<h4 id="deleting-files">Deleting files</h4>
+
+<h4 id="linking-files">Linking files</h4>
+
+<h3 id="viewing-files">Viewing files</h3>
+
+<p><em>Last updated: 23-12-2018</em></p>
+
+	    
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links"></ul>
+      <p class="copyright text-muted">
+      Karen Harbisher
+      &nbsp;&bull;&nbsp;
+      2020
+
+      
+
+      
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme by
+      <a href="https://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+  
+  </body>
+</html>
